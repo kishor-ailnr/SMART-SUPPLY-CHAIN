@@ -1,0 +1,16 @@
+[
+  { "name": "Shanghai", "country": "China", "lat": 31.2304, "lng": 121.4737 },
+  { "name": "Singapore", "country": "Singapore", "lat": 1.3521, "lng": 103.8198 },
+  { "name": "Rotterdam", "country": "Netherlands", "lat": 51.9244, "lng": 4.4777 },
+  { "name": "Mumbai", "country": "India", "lat": 18.9667, "lng": 72.8333 },
+  { "name": "Colombo", "country": "Sri Lanka", "lat": 6.9271, "lng": 79.8612 },
+  { "name": "Jeddah", "country": "Saudi Arabia", "lat": 21.4858, "lng": 39.1925 },
+  { "name": "Dubai", "country": "UAE", "lat": 25.2048, "lng": 55.2708 },
+  { "name": "Suez", "country": "Egypt", "lat": 29.9668, "lng": 32.5498 },
+  { "name": "Aden", "country": "Yemen", "lat": 12.7797, "lng": 45.0366 },
+  { "name": "Hong Kong", "country": "China", "lat": 22.3193, "lng": 114.1694 },
+  { "name": "Chittagong", "country": "Bangladesh", "lat": 22.3419, "lng": 91.8155 },
+  { "name": "Karachi", "country": "Pakistan", "lat": 24.8607, "lng": 67.0104 },
+  { "name": "Chennai", "country": "India", "lat": 13.0827, "lng": 80.2707 },
+  { "name": "Kochi", "country": "India", "lat": 9.9312, "lng": 76.2673 }
+]

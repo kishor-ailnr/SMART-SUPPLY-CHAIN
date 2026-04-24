@@ -1,0 +1,116 @@
+[
+  {
+    "id": "veh-001",
+    "name": "TRUCK-001",
+    "license_plate": "MH04AB1234",
+    "driver_name": "Rajesh Kumar",
+    "driver_phone": "+91-9876543210",
+    "vehicle_type": "HDT",
+    "cargo_type": "GENERAL",
+    "load_weight_tons": 14.5,
+    "fuel_type": "DIESEL",
+    "color": "#f0b429",
+    "lat": 19.0760,
+    "lng": 72.8777,
+    "speedKmh": 68,
+    "heading": 235,
+    "status": "MOVING",
+    "confirmedRoute": [
+      {"lat":19.0760,"lng":72.8777},
+      {"lat":19.5,"lng":73.0},
+      {"lat":20.0,"lng":73.5},
+      {"lat":20.5,"lng":74.0}
+    ]
+  },
+  {
+    "id": "veh-002",
+    "name": "TRUCK-002",
+    "license_plate": "MH12CD5678",
+    "driver_name": "Santosh Yadav",
+    "driver_phone": "+91-9123456789",
+    "vehicle_type": "MDT",
+    "cargo_type": "PERISHABLE",
+    "load_weight_tons": 8,
+    "fuel_type": "DIESEL",
+    "color": "#f0b429",
+    "lat": 18.5204,
+    "lng": 73.8567,
+    "speedKmh": 70,
+    "heading": 120,
+    "status": "MOVING",
+    "confirmedRoute": [
+      {"lat":18.5204,"lng":73.8567},
+      {"lat":19.0,"lng":74.2},
+      {"lat":19.5,"lng":74.6},
+      {"lat":20.0,"lng":75.0}
+    ]
+  },
+  {
+    "id": "veh-003",
+    "name": "TRUCK-003",
+    "license_plate": "TN07EF9012",
+    "driver_name": "Murugan Pillai",
+    "driver_phone": "+91-9988776655",
+    "vehicle_type": "TANKER",
+    "cargo_type": "LIQUID",
+    "load_weight_tons": 22,
+    "fuel_type": "DIESEL",
+    "color": "#f0b429",
+    "lat": 13.0827,
+    "lng": 80.2707,
+    "speedKmh": 55,
+    "heading": 300,
+    "status": "MOVING",
+    "confirmedRoute": [
+      {"lat":13.0827,"lng":80.2707},
+      {"lat":13.5,"lng":80.8},
+      {"lat":14.0,"lng":81.3},
+      {"lat":14.5,"lng":81.8}
+    ]
+  },
+  {
+    "id": "veh-004",
+    "name": "TRUCK-004",
+    "license_plate": "DL01GH3456",
+    "driver_name": "Harjeet Singh",
+    "driver_phone": "+91-9876501234",
+    "vehicle_type": "REFRIGERATED",
+    "cargo_type": "PERISHABLE",
+    "load_weight_tons": 12,
+    "fuel_type": "DIESEL",
+    "color": "#f0b429",
+    "lat": 28.7041,
+    "lng": 77.1025,
+    "speedKmh": 0,
+    "heading": 0,
+    "status": "BLACKOUT",
+    "confirmedRoute": [
+      {"lat":28.7041,"lng":77.1025},
+      {"lat":29.0,"lng":77.5},
+      {"lat":29.5,"lng":78.0}
+    ]
+  },
+  {
+    "id": "veh-005",
+    "name": "TRUCK-005",
+    "license_plate": "WB12IJ7890",
+    "driver_name": "Bikash Das",
+    "driver_phone": "+91-9123001122",
+    "vehicle_type": "HDT",
+    "cargo_type": "GENERAL",
+    "load_weight_tons": 20,
+    "fuel_type": "DIESEL",
+    "color": "#f0b429",
+    "lat": 22.5726,
+    "lng": 88.3639,
+    "speedKmh": 60,
+    "heading": 45,
+    "status": "MOVING",
+    "confirmedRoute": [
+      {"lat":22.5726,"lng":88.3639},
+      {"lat":23.0,"lng":88.8},
+      {"lat":23.5,"lng":89.3},
+      {"lat":24.0,"lng":89.8}
+    ]
+  }
+]

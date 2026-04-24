@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #060d1a;
+  --bg-secondary: #0a1628;
+  --bg-tertiary: #0f1f38;
+  --bg-hover: #152742;
+
+  --ocean-deep: #001f3f;
+  --ocean-mid: #003366;
+  --ocean-shallow: #0066cc;
+
+  --accent: #00d4ff;
+  --accent-dim: rgba(0, 212, 255, 0.15);
+  --accent-border: rgba(0, 212, 255, 0.4);
+
+  --safe: #22c55e;
+  --safe-dim: rgba(34, 197, 94, 0.12);
+  --caution: #f0b429;
+  --caution-dim: rgba(240, 180, 41, 0.12);
+  --warning: #f97316;
+  --warning-dim: rgba(249, 115, 22, 0.12);
+  --danger: #ef4444;
+  --danger-dim: rgba(239, 68, 68, 0.12);
+  --critical: #dc2626;
+  --dark-vessel: #8b5cf6;
+  --dark-vessel-dim: rgba(139, 92, 246, 0.12);
+
+  --port-red: #e74c3c;
+  --starboard-green: #2ecc71;
+  --masthead-white: #ecf0f1;
+
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-body: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #e0f0ff;
+  font-family: var(--font-body);
+  overflow: hidden;
+  margin: 0;
+}
+
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+
+.glass {
+  background: rgba(10, 22, 40, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.radar-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.radar-sweep::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0deg, var(--accent-dim) 90deg, transparent 90deg);
+  animation: sweep 4s linear infinite;
+  transform-origin: center;
+  pointer-events: none;
+}
+
+@keyframes sweep {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.vessel-icon-container {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leaflet-container {
+  background: #060d1a !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--bg-tertiary); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-border); }
+
+input, select, textarea {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(0, 212, 255, 0.2) !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem !important;
+}
+
+input:focus {
+  outline: none !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--accent-dim) !important;
+}
+
+.custom-scrollbar {
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-tertiary) var(--bg-primary);
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(0, 212, 255, 0.3); }

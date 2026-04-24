@@ -1,0 +1,46 @@
+[
+  {
+    "regionId": "RED_SEA_HOUTHI",
+    "name": "Red Sea Houthi Conflict Zone",
+    "polygon": [
+      [32.0, 15.0], [43.0, 15.0], [43.0, 30.0], [32.0, 30.0], [32.0, 15.0]
+    ],
+    "riskType": "war",
+    "status": "ACTIVE",
+    "severity": "CRITICAL",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "regionId": "GULF_OF_ADEN_PIRACY",
+    "name": "Gulf of Aden Piracy Zone",
+    "polygon": [
+      [42.0, 10.0], [55.0, 10.0], [55.0, 15.0], [42.0, 15.0], [42.0, 10.0]
+    ],
+    "riskType": "piracy",
+    "status": "ACTIVE",
+    "severity": "HIGH",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "regionId": "STRAIT_OF_HORMUZ",
+    "name": "Strait of Hormuz",
+    "polygon": [
+      [54.0, 23.0], [57.0, 23.0], [57.0, 26.0], [54.0, 26.0], [54.0, 23.0]
+    ],
+    "riskType": "blockade",
+    "status": "ACTIVE",
+    "severity": "HIGH",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "regionId": "SOMALI_COAST",
+    "name": "Somali Coast Piracy Zone",
+    "polygon": [
+      [41.0, 2.0], [55.0, 2.0], [55.0, 12.0], [41.0, 12.0], [41.0, 2.0]
+    ],
+    "riskType": "piracy",
+    "status": "ACTIVE",
+    "severity": "MODERATE",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  }
+]

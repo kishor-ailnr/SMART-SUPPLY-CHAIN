@@ -1,0 +1,50 @@
+{
+  "name": "airways-2.0",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "vite",
+    "server": "node server/server.js",
+    "build": "vite build",
+    "seed": "node server/db.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "react-leaflet": "^4.2.1",
+    "leaflet": "^1.9.4",
+    "three": "^0.128.0",
+    "@react-three/fiber": "^8.15.0",
+    "@react-three/drei": "^9.92.0",
+    "zustand": "^4.5.0",
+    "recharts": "^2.10.0",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.330.0",
+    "tailwindcss": "^3.4.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "axios": "^1.6.7",
+    "@langchain/anthropic": "^0.1.0",
+    "@langchain/google-genai": "^0.0.10",
+    "@langchain/core": "^0.1.0",
+    "langchain": "^0.1.0",
+    "@tensorflow/tfjs": "^4.17.0",
+    "web3": "^4.5.0",
+    "mqtt": "^5.3.4",
+    "pdfkit": "^0.14.0",
+    "express": "^4.18.3",
+    "ws": "^8.16.0",
+    "better-sqlite3": "^9.4.3",
+    "node-cron": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
+    "uuid": "^9.0.0",
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.0"
+  }
+}

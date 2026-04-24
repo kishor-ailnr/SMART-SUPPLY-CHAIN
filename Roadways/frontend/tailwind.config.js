@@ -1,0 +1,61 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary':    '#05070f',
+        'bg-secondary':  '#0b1324',
+        'bg-tertiary':   '#0d172a',
+        'bg-glass':      'rgba(11, 19, 36, 0.75)',
+        'bg-hover':      'rgba(0, 229, 255, 0.08)',
+        'accent':        '#00e5ff',
+        'safe':          '#22c55e',
+        'warning':       '#facc15',
+        'danger':        '#f97316',
+        'critical':      '#dc2626',
+        'emergency':     '#8b5cf6',
+        'highway':       '#3b82f6',
+        'lane':          '#e5e7eb',
+        'construction':  '#f59e0b',
+        'pedestrian':    '#5eead4',
+        'info':          '#00e5ff',
+        'india-saffron': '#FF9933',
+        'india-green':   '#138808',
+        'india-navy':    '#000080',
+      },
+      fontFamily: {
+        hud:   ['Rajdhani', 'Barlow Condensed', 'sans-serif'],
+        display: ['Barlow Condensed', 'sans-serif'],
+        data:  ['JetBrains Mono', 'IBM Plex Mono', 'monospace'],
+        mono:  ['IBM Plex Mono', 'monospace'],
+        body:  ['IBM Plex Sans', 'sans-serif'],
+      },
+      backgroundImage: {
+        'asphalt': 'linear-gradient(135deg, #05070f 0%, #0b1324 100%)',
+        'glass':   'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))',
+        'radar-sweep': 'conic-gradient(from 0deg, transparent 270deg, rgba(0,229,255,0.15) 360deg)',
+      },
+      boxShadow: {
+        'accent':    '0 0 20px rgba(0, 229, 255, 0.35), 0 0 40px rgba(0, 229, 255, 0.15)',
+        'safe':      '0 0 16px rgba(34, 197, 94, 0.35)',
+        'warning':   '0 0 16px rgba(250, 204, 21, 0.35)',
+        'danger':    '0 0 16px rgba(220, 38, 38, 0.35)',
+        'emergency': '0 0 16px rgba(139, 92, 246, 0.35)',
+        'glass':     '0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255,255,255,0.05)',
+      },
+      animation: {
+        'radar-spin':   'radarSpin 4s linear infinite',
+        'pulse-ring':   'pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite',
+        'streak':       'streakMove 2s ease-in-out infinite',
+        'scan-line':    'scanLine 3s linear infinite',
+        'blink-alert':  'blink-alert 1.2s ease-in-out infinite',
+        'float':        'float 3s ease-in-out infinite',
+      },
+    },
+  },
+  plugins: [],
+}

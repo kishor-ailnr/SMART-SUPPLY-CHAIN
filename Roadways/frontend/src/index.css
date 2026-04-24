@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== ROOT DESIGN TOKENS ===== */
+:root {
+  --bg-primary: #05070f;
+  --bg-secondary: #0b1324;
+  --bg-glass: rgba(11, 19, 36, 0.75);
+  --accent: #00e5ff;
+  --accent-glow: rgba(0, 229, 255, 0.25);
+  --safe: #22c55e;
+  --warning: #facc15;
+  --danger: #f97316;
+  --critical: #dc2626;
+  --emergency: #8b5cf6;
+  --text-primary: #e0f2fe;
+  --text-secondary: #94a3b8;
+  --border: rgba(0, 229, 255, 0.25);
+}
+
+/* ===== BASE RESET ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: linear-gradient(135deg, #05070f 0%, #0b1324 100%);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ===== GLASSMORPHISM ===== */
+.glass, .glass-panel {
+  background: rgba(11, 19, 36, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  border-radius: 12px;
+}
+
+.glass-dark {
+  background: rgba(5, 7, 15, 0.9);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 12px;
+}
+
+/* ===== NEON GLOWS ===== */
+.glow-accent { box-shadow: 0 0 20px rgba(0, 229, 255, 0.35), 0 0 40px rgba(0, 229, 255, 0.15); }
+.glow-safe   { box-shadow: 0 0 20px rgba(34, 197, 94, 0.35); }
+.glow-warn   { box-shadow: 0 0 20px rgba(250, 204, 21, 0.35); }
+.glow-danger { box-shadow: 0 0 20px rgba(220, 38, 38, 0.35); }
+.glow-emergency { box-shadow: 0 0 20px rgba(139, 92, 246, 0.35); }
+
+/* ===== NEON TEXT ===== */
+.text-neon-blue   { color: #00e5ff; text-shadow: 0 0 10px rgba(0,229,255,0.7); }
+.text-neon-green  { color: #22c55e; text-shadow: 0 0 8px rgba(34,197,94,0.6); }
+.text-neon-yellow { color: #facc15; text-shadow: 0 0 8px rgba(250,204,21,0.6); }
+.text-neon-red    { color: #dc2626; text-shadow: 0 0 8px rgba(220,38,38,0.6); }
+.text-neon-purple { color: #8b5cf6; text-shadow: 0 0 8px rgba(139,92,246,0.6); }
+
+/* ===== HUD TYPOGRAPHY ===== */
+.font-hud    { font-family: 'Rajdhani', 'Barlow Condensed', sans-serif; letter-spacing: 0.08em; }
+.font-data   { font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace; }
+.font-mono   { font-family: 'IBM Plex Mono', monospace; }
+.font-body   { font-family: 'IBM Plex Sans', sans-serif; }
+
+/* ===== SCROLLBARS ===== */
+::-webkit-scrollbar       { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: rgba(5,7,15,0.8); }
+::-webkit-scrollbar-thumb { background: #00e5ff; border-radius: 99px; box-shadow: 0 0 6px rgba(0,229,255,0.8); }
+::-webkit-scrollbar-thumb:hover { background: #00b8d4; }
+
+/* ===== MAP THEME ===== */
+.leaflet-container { background: #05070f !important; }
+.leaflet-tile      { filter: brightness(0.45) contrast(1.2) saturate(0.6) !important; }
+
+/* ===== TRAFFIC PULSE ANIMATIONS ===== */
+@keyframes radarSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes streakMove {
+  0%   { transform: translateX(-100%); opacity: 0; }
+  50%  { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+@keyframes scanLine {
+  0%   { top: 0%; }
+  100% { top: 100%; }
+}
+@keyframes blink-alert {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.animate-radar-spin   { animation: radarSpin 4s linear infinite; }
+.animate-pulse-ring   { animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+.animate-streak       { animation: streakMove 2s ease-in-out infinite; }
+.animate-scan-line    { animation: scanLine 3s linear infinite; }
+.animate-blink-alert  { animation: blink-alert 1.2s ease-in-out infinite; }
+.animate-float        { animation: float 3s ease-in-out infinite; }
+
+/* ===== VEHICLE TRACKING ===== */
+.vehicle-marker { transition: transform 0.4s linear; }
+
+/* ===== GRID LINES (HUD overlay) ===== */
+.hud-grid {
+  background-image:
+    linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ===== CUSTOM FORM ELEMENTS ===== */
+input, select, textarea {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-primary) !important;
+}
+input::placeholder { color: var(--text-secondary); opacity: 0.6; }
+select option { background: #0b1324; color: #e0f2fe; }
+
+/* ===== BUTTON BASE ===== */
+.btn-hud {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgba(0,229,255,0.4);
+  background: rgba(0,229,255,0.08);
+  color: #00e5ff;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-hud:hover {
+  background: rgba(0,229,255,0.18);
+  box-shadow: 0 0 16px rgba(0,229,255,0.3);
+}
+
+/* ===== STATUS BADGE ===== */
+.badge-smooth   { background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.4); }
+.badge-moderate { background: rgba(250,204,21,0.15); color: #facc15; border: 1px solid rgba(250,204,21,0.4); }
+.badge-heavy    { background: rgba(247,151,22,0.15); color: #f97316; border: 1px solid rgba(247,151,22,0.4); }
+.badge-critical { background: rgba(220,38,38,0.15); color: #dc2626; border: 1px solid rgba(220,38,38,0.4); }
+.badge-emergency{ background: rgba(139,92,246,0.15); color: #8b5cf6; border: 1px solid rgba(139,92,246,0.4); }
+
+/* ===== CHART TOOLTIP ===== */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: rgba(11,19,36,0.95) !important;
+  border: 1px solid rgba(0,229,255,0.3) !important;
+  border-radius: 8px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 11px !important;
+}

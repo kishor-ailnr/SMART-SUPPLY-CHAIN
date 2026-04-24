@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-bg-primary text-gray-100 font-body overflow-x-hidden;
+  }
+}
+
+.glass-panel {
+  @apply bg-bg-secondary/70 backdrop-blur-md border border-rail-border shadow-lg;
+}
+
+.hud-text {
+  @apply font-mono tracking-wider;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rail-accentBorder);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.map-base-sandal {
+  /* achieved by adjusting a light map like Carto Positron or OSM */
+  filter: sepia(0.5) saturate(1.1) brightness(1.1) contrast(0.95);
+}
+
+.map-rail-orange {
+  /* Highlighting tracks in bright orange */
+  filter: hue-rotate(-15deg) saturate(4) brightness(1.4);
+}
+
+.map-sea-blue-overlay {
+  /* This is a fallback idea: if we had a water-only layer we'd apply this. 
+     For now, we'll use a tile provider that has blue water naturally. */
+}
+
+.signal-animate {
+  animation: signal-blink 2s infinite;
+}

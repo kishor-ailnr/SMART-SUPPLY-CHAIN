@@ -1,0 +1,19 @@
+{
+  "name": "roadways",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm --workspace backend run start",
+    "client": "npm --workspace frontend run dev",
+    "install:all": "npm install && npm --workspace backend install && npm --workspace frontend install",
+    "seed": "npm --workspace backend run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

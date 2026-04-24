@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Background layers */
+  --bg-void: #070b14;
+  --bg-surface: #0d1526;
+  --bg-panel: #111c30;
+  --bg-card: #162040;
+  --bg-hover: #1d2d55;
+  
+  /* Accent colors */
+  --accent-primary: #00d4ff;
+  --accent-secondary: #7c3aed;
+  --accent-glow: rgba(0, 212, 255, 0.2);
+  
+  /* Status colors */
+  --status-ok: #00ff88;
+  --status-warn: #ffd700;
+  --status-high: #ff6b35;
+  --status-critical: #ff0000;
+  --status-idle: #6b7280;
+  --status-info: #00bfff;
+  
+  /* Vehicle route colors */
+  --route-reefer: #00bfff;
+  --route-container: #ff8c00;
+  --route-flatbed: #9370db;
+  --route-tanker: #ff4500;
+  --route-van: #32cd32;
+  
+  /* Typography */
+  --font-display: 'Orbitron', monospace;
+  --font-body: 'Space Mono', monospace;
+  --font-data: 'JetBrains Mono', monospace;
+  
+  /* Borders & glows */
+  --border-subtle: rgba(0, 212, 255, 0.15);
+  --border-active: rgba(0, 212, 255, 0.5);
+  --glow-primary: 0 0 20px rgba(0, 212, 255, 0.3);
+  --glow-warn: 0 0 20px rgba(255, 107, 53, 0.4);
+}
+
+body {
+  background-color: var(--bg-void);
+  color: #fff;
+  font-family: var(--font-body);
+}
+
+.panel-glass {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+}
+
+.card-glass {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-panel));
+  border: 1px solid var(--border-subtle);
+}
+
+.glow-active {
+  box-shadow: var(--glow-primary);
+}
+
+.glow-warn {
+  box-shadow: var(--glow-warn);
+  animation: pulse-warn 2s infinite;
+}
+
+@keyframes pulse-warn {
+  0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+}
+
+.display-font { font-family: var(--font-display); }
+.data-font { font-family: var(--font-data); color: var(--accent-primary); }
